@@ -10,7 +10,6 @@ setInterval(function() {
     let jour = date.getDate();
     let mois = date.getMonth() + 1;
     let annee = date.getFullYear();
-
     navbar.innerHTML = heure + "h" + minutes + " | " + jour + "/" + mois + "/" + annee;
 
     battery.then(function(battery) {
