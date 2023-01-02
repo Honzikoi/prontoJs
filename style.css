@@ -15,5 +15,20 @@ html {
 }
 
 .calc {
-  z-index: -100;
+  /* z-index: -100; */
+}
+
+.card {
+  margin: 24px;
+  padding: 12px;
+  display: inline-block;
+  border-radius: 18px;
+}
+
+.card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+.card h4 {
+  text-align: center;
+  font-family: "Open Sans";
 }
