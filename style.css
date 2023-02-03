@@ -34,7 +34,10 @@ html {
 }
 #navbar{
   text-align: center;
-  background-color: bisque;
+  padding: 1.6em;
+  background-color: rgb(253, 253, 253);
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
   
 }
 #homescreen{
