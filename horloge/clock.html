@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horloge</title>
+    <style src="clock.css"></style>
+    <script src="clock.js"></script>
+</head>
+<body onload="startTime()">
+    <div id="clock"></div>
+    <br><br>
+    <div id="chrono">0h : 0m : 0s</div>
+    <br><br>
+    <button onclick="startChrono()">Démarrer le chronomètre</button>
+    <button onclick="stopChrono()">Arrêter le chronomètre</button>
+    <br><br>
+    <input type="text" id="timer" value="1"> minutes
+    <br><br>
+    <button onclick="startTimer()">Démarrer le minuteur</button>
+</body>
+</html>
