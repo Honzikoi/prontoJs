@@ -40,3 +40,12 @@ html {
 #homescreen{
   
 }
+
+#lock .iconLock{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#lock .iconLock:hover{
+  color: rgb(10, 10, 131);
+}
