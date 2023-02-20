@@ -11,6 +11,16 @@
 <body onload="startTime()">
     <div id="clock"></div>
     <br><br>
+    <div id="clock"></div>
+<br>
+<label for="hours">Heures:</label>
+<input type="number" id="hours" value="0" min="0" max="23">
+<label for="minutes">Minutes:</label>
+<input type="number" id="minutes" value="0" min="0" max="59">
+<label for="seconds">Secondes:</label>
+<input type="number" id="seconds" value="0" min="0" max="59">
+<button onclick="updateTime()">Mettre à jour</button>
+<br><br>
     <div id="chrono">0h : 0m : 0s</div>
     <br><br>
     <button onclick="startChrono()">Démarrer le chronomètre</button>
