@@ -1,3 +1,4 @@
+// ------------------ Horloge ------------------//
 var hours = 0;
 var minutes = 0;
 var seconds = 0;
@@ -41,31 +42,47 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // ajoute un zéro devant les nombres inférieurs à 10
   return i;
 }
-  
-  var second = 0;
-  var minute = 0;
-  var hour = 0;
-  var interval;
-  
-  function startChrono() {
-      interval = setInterval(function() {
-          document.getElementById("chrono").innerHTML = hour + "h : " + minute + "m : " + second + "s";
-          second++;
-          if(second == 60) {
-              minute++;
-              second = 0;
-          }
-          if(minute == 60) {
-              hour++;
-              minute = 0;
-          }
-      }, 1000);
-  }
-  
-  function stopChrono() {
-      clearInterval(interval);
-  }
-  
+  // ------------------ Chronomètre ------------------//
+  var chronometer = document.getElementById('chronometer');
+var startBtn = document.getElementById('startBtn');
+var pauseBtn = document.getElementById('pauseBtn');
+var resetBtn = document.getElementById('resetBtn');
+var chronoStartTime;
+var elapsedTime = 0;
+var timerInterval;
+
+function startChronometer() {
+  chronoStartTime = Date.now() - elapsedTime;
+  timerInterval = setInterval(function() {
+    elapsedTime = Date.now() - chronoStartTime;
+    chronometer.innerHTML = formatTime(elapsedTime);
+  }, 10);
+}
+
+function pauseChronometer() {
+  clearInterval(timerInterval);
+}
+
+function resetChronometer() {
+  clearInterval(timerInterval);
+  elapsedTime = 0;
+  chronometer.innerHTML = formatTime(elapsedTime);
+}
+
+function formatTime(milliseconds) {
+  var date = new Date(milliseconds);
+  var minutes = date.getMinutes().toString().padStart(2, '0');
+  var seconds = date.getSeconds().toString().padStart(2, '0');
+  var milliseconds = Math.floor(date.getMilliseconds() / 10).toString().padStart(2, '0');
+  return minutes + ':' + seconds + ':' + milliseconds;
+}
+
+startBtn.addEventListener('click', startChronometer);
+pauseBtn.addEventListener('click', pauseChronometer);
+resetBtn.addEventListener('click', resetChronometer);
+
+
+ //------------------ Timer ------------------// 
  
 var timer;
 var countDownDate;

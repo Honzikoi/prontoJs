@@ -43,3 +43,7 @@ html {
 #homescreen{
   
 }
+a {
+  text-decoration: none;
+  color: black; /* ou toute autre couleur de votre choix */
+}
