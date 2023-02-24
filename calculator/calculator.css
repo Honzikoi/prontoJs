@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 .dispDate p{
   display: inline;
@@ -7,17 +7,17 @@
 html {
   background: #100a1c;
   background-image:
-    radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
-    radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    linear-gradient(to right, #1a1a1a 0%, #999999 100%);
   background-attachment: fixed;
-  color: #6cacc5;
+  color: #ffffff;
 }
 
 body {
-  color: #6cacc5;
+  color: #ffffff;
   font: 300 18px/1.6 "Source Sans Pro",sans-serif;
   padding: 2em 0 2em;
   text-align: center;
+  font-family: Montserrat;
 }
 
 /* Gradient text only on Webkit */
@@ -35,16 +35,15 @@ body {
   font-size: 28px;
   margin: 0 auto;
   width: 10em;
-  
-  &::before,
-  &::after {
-    content: " ";
-    display: table;
-  }
-  
-  &::after {
-    clear: both;
-  }
+  font-family: Montserrat;
+}
+
+.calculator::before, .calculator::after {
+  content: " ";
+  display: table;
+}
+.calculator::after {
+  clear: both;
 }
 
 /* Calculator after dividing by zero */
@@ -56,8 +55,8 @@ body {
 
 .viewer {
   margin-left: 12px;
-  color: #c97874;
-  background-color: #2e2b54;
+  color: #000000;
+  background-color: #054308;
   float: left;
   padding-right: 8px;
   line-height: 3em;
@@ -70,8 +69,8 @@ body {
 
 button {
   border: 0;
-  background: rgba(42,50,113, .28);
-  color: #6cacc5;
+  background: rgba(62, 63, 75, 0.28);
+  color: #b1c2c9;
   cursor: pointer;
   float: left;
   font: inherit;
@@ -81,7 +80,16 @@ button {
   transition: all 0.5s;
   
 }
-
+.redirect .btnHome{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 4em;
+  height: 2em;
+  font-family: Montserrat;
+  user-select: none;
+  color:#fff;
+}
 
 
 @media (min-width: 420px) {

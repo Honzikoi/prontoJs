@@ -7,11 +7,11 @@ html {
   -o-background-size: cover; */
   /* background-size: cover; */
   background-repeat: no-repeat;
-  background: -webkit-linear-gradient(to left top, rgb(10, 10, 11), rgb(206, 198, 198));
-  background: -moz-linear-gradient(to left top, rgb(10, 10, 11), rgb(206, 198, 198));
-  background: -ms-linear-gradient(to left top, rgb(10, 10, 11), rgb(206, 198, 198));
-  background: -o-linear-gradient(to left top,  rgb(10, 10, 11), rgb(206, 198, 198));
-  background: linear-gradient(to left top, rgb(10, 10, 11), rgb(206, 198, 198));
+  background: -webkit-linear-gradient(to right, #1a1a1a 0%, #999999 100%);
+  background: -moz-linear-gradient(to right, #1a1a1a 0%, #999999 100%);
+  background: -ms-linear-gradient(to right, #1a1a1a 0%, #999999 100%);
+  background: -o-linear-gradient(to right, #1a1a1a 0%, #999999 100%);
+  background: linear-gradient(to right, #1a1a1a 0%, #999999 100%);
 }
 
 .card {
