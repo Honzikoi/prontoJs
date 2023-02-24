@@ -318,3 +318,4 @@ setting.addEventListener("click", function() {
     }
   });
 });
+
