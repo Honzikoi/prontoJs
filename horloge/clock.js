@@ -137,7 +137,7 @@ function updateTimerDisplay() {
 }
 
 function playSound() {
-  const audio = new Audio('path/to/sound/file.mp3');
+  const audio = new Audio('./file.mp3');
   audio.play();
 }
 

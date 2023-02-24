@@ -15,7 +15,7 @@ body{
     width: 100vw;
     background-color: #333; /* couleur de fond sombre */
     background-image: linear-gradient(to right, #1a1a1a 0%, #999999 100%); /* dégradé linéaire de gauche à droite */
-    font-family: 'Orbitron', sans-serif; /* police moderne */
+    font-family: 'Montserrat', sans-serif; /* police moderne */
     color: #fff; /* couleur du texte */
     display: flex;
     justify-content: center;
@@ -31,11 +31,43 @@ body{
     color: #fff;
     text-shadow: 0 2px 50px rgba(10,10,10,0.5);
 }
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  margin-right: 10px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 120px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-wrapper .input-label {
+  position: absolute;
+  margin-right: 20px;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999;
+}
 
 .heures{
     width: 500px;
     font-size: 100px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(10,10,10,0.2);
@@ -43,7 +75,7 @@ body{
 
 .date{
     font-size: 25px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Monserrat', sans-serif;
     padding-top: 10px;
 }
 .btn {
@@ -57,6 +89,7 @@ body{
     padding: 0.5rem 1rem;
     border-radius: var(--radius-md);
     font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: var(--color-contrast-higher);
     cursor: pointer;
@@ -92,6 +125,7 @@ body{
     padding: 0.5rem 1rem;
     border-radius: var(--radius-md);
     font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: var(--color-contrast-higher);
     cursor: pointer;
