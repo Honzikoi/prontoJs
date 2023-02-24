@@ -119,3 +119,27 @@ input:checked + .slider:before {
   text-decoration:none;
   color: aliceblue;
 }
+@media screen and (max-width: 768px) {
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  .card {
+    margin: 5%;
+    padding: 5%;
+    display: inline-block;
+    border-radius: 18px;
+    width: 100px;
+    height: 100px;
+  }
+
+  #navbar{
+    padding: 1em;
+    border-radius: 25px;
+    margin-bottom: 5%;
+  }
+
+  .switch {
+    margin-bottom: 5%;
+  }
+}
