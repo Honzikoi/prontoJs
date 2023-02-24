@@ -7,11 +7,11 @@ html {
   -o-background-size: cover; */
   /* background-size: cover; */
   background-repeat: no-repeat;
-  background: -webkit-linear-gradient(to left top, blue, red);
-  background: -moz-linear-gradient(to left top, blue, red);
-  background: -ms-linear-gradient(to left top, blue, red);
-  background: -o-linear-gradient(to left top, blue, red);
-  background: linear-gradient(to left top, blue, red);
+  background: -webkit-linear-gradient(to left top, rgb(10, 10, 11), rgb(206, 198, 198));
+  background: -moz-linear-gradient(to left top, rgb(10, 10, 11), rgb(206, 198, 198));
+  background: -ms-linear-gradient(to left top, rgb(10, 10, 11), rgb(206, 198, 198));
+  background: -o-linear-gradient(to left top,  rgb(10, 10, 11), rgb(206, 198, 198));
+  background: linear-gradient(to left top, rgb(10, 10, 11), rgb(206, 198, 198));
 }
 
 .calc {
@@ -113,4 +113,9 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+.redirect{
+  user-select: none;
+  text-decoration:none;
+  color: aliceblue;
 }
