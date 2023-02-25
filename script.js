@@ -177,22 +177,29 @@ lock.addEventListener("click", function() {
 
 
 setting.addEventListener("click", function() {
-  const divSett = document.createElement("div");
-  divSett.style.color = "white";
-  divSett.style.position = "fixed";
-  divSett.style.fontSize = "20px";
-  divSett.style.fontWeight = "bold";
-  divSett.style.width = "60%";
-  divSett.style.height = "50%";
-  divSett.style.top = "25%";
-  divSett.style.left = "20%";
-  divSett.style.zIndex = "5";
-  divSett.style.fontFamily = "Montserrat";
-  divSett.style.overflowY = "scroll";
-  divSett.style.paddingLeft = "20px";
-  divSett.style.background = "linear-gradient(to left top, rgb(20, 20, 24), rgb(173, 156, 156))"
 
-  divSett.innerHTML = `<p>Configuration de l'heure:</p>
+  var settCheck = document.getElementsByClassName('settMult');
+
+  if (settCheck.length == 0) {
+
+    const divSett = document.createElement("div");
+    divSett.style.color = "white";
+    divSett.style.position = "fixed";
+    divSett.style.fontSize = "20px";
+    divSett.style.fontWeight = "bold";
+    divSett.style.width = "60%";
+    divSett.style.height = "50%";
+    divSett.style.top = "25%";
+    divSett.style.left = "20%";
+    divSett.style.zIndex = "5";
+    divSett.style.fontFamily = "Montserrat";
+    divSett.style.overflowY = "scroll";
+    divSett.style.paddingLeft = "20px";
+    divSett.style.background = "linear-gradient(to left top, rgb(20, 20, 24), rgb(173, 156, 156))";
+
+    divSett.classList.add("settMult");
+
+    divSett.innerHTML = `<p>Configuration de l'heure:</p>
 
                       <ul><li><label style="margin-right: 20px;" for="heure">Afficher/masquer l'heure</label><label class="switch">
                         <input id="heure" type="checkbox" checked>
@@ -209,133 +216,135 @@ setting.addEventListener("click", function() {
                       </ul></br>
                       `;
 
-  divSett.innerHTML += `<p>Configuration de la date:</p>
+    divSett.innerHTML += `<p>Configuration de la date:</p>
 
-                      <ul><li><label style="margin-right: 20px;" for="jour">Afficher/masquer le jour</label><label class="switch">
-                        <input id="jour" type="checkbox" checked>
-                        <span class="slider round"></span>
-                      </label></li>
-                      <li><label style="margin-right: 20px;" for="mois">Afficher/masquer le mois</label><label class="switch">
-                        <input id="mois" type="checkbox" checked>
-                        <span class="slider round"></span>
-                      </label></li>
-                      <li><label style="margin-right: 20px;" for="annee">Afficher/masquer l'année'</label><label class="switch">
-                        <input id="annee" type="checkbox" checked>
-                        <span class="slider round"></span>
-                      </label></li>
-                      </ul></br>
-                      `;
+                        <ul><li><label style="margin-right: 20px;" for="jour">Afficher/masquer le jour</label><label class="switch">
+                          <input id="jour" type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label></li>
+                        <li><label style="margin-right: 20px;" for="mois">Afficher/masquer le mois</label><label class="switch">
+                          <input id="mois" type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label></li>
+                        <li><label style="margin-right: 20px;" for="annee">Afficher/masquer l'année'</label><label class="switch">
+                          <input id="annee" type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label></li>
+                        </ul></br>
+                        `;
 
-  divSett.innerHTML += `<p>Configuration de la vibration:</p>
+    divSett.innerHTML += `<p>Configuration de la vibration:</p>
 
-                      <ul><li><label style="margin-right: 20px;" for="jour">Afficher/masquer l'état de la vibration'</label><label class="switch">
-                        <input id="vibrat" type="checkbox" checked>
-                        <span class="slider round"></span>
-                      </label></li>
-                      <li><label style="margin-right: 20px;" for="mois">Activer/désactiver les retours haptiques</label><label class="switch">
-                        <input id="haptique" type="checkbox" checked>
-                        <span class="slider round"></span>
-                      </label></li>
-                      </ul></br>
-                      `;
-            
-  divSett.innerHTML += `<p>Configuration de la batterie</p>
+                        <ul><li><label style="margin-right: 20px;" for="jour">Afficher/masquer l'état de la vibration'</label><label class="switch">
+                          <input id="vibrat" type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label></li>
+                        <li><label style="margin-right: 20px;" for="mois">Activer/désactiver les retours haptiques</label><label class="switch">
+                          <input id="haptique" type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label></li>
+                        </ul></br>
+                        `;
+              
+    divSett.innerHTML += `<p>Configuration de la batterie</p>
 
-                      <ul><li><label style="margin-right: 20px;" for="jour">Afficher/masquer l'état de la batterie</label><label class="switch">
-                        <input id="batterie" type="checkbox" checked>
-                        <span class="slider round"></span>
-                      </label></li>
-                      </ul></br>
-                      `;
+                        <ul><li><label style="margin-right: 20px;" for="jour">Afficher/masquer l'état de la batterie</label><label class="switch">
+                          <input id="batterie" type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label></li>
+                        </ul></br>
+                        `;
 
-  const divClose = document.createElement("div");
-  const iTag = document.createElement("i");
+    const divClose = document.createElement("div");
+    const iTag = document.createElement("i");
 
-  iTag.classList.add("fa", "fa-close");
-  divClose.appendChild(iTag);
+    iTag.classList.add("fa", "fa-close");
+    divClose.appendChild(iTag);
 
-  divClose.style.position = "absolute";
-  divClose.style.top = "10px";
-  divClose.style.right = "10px";
-  divClose.classList.add("closeSett");
+    divClose.style.position = "absolute";
+    divClose.style.top = "10px";
+    divClose.style.right = "10px";
+    divClose.classList.add("closeSett");
 
-  divSett.appendChild(divClose);
+    divSett.appendChild(divClose);
 
-  document.body.append(divSett);
+    document.body.append(divSett);
 
-  var hour = document.getElementById('heure');
-  hour.addEventListener('change', function(){
-    var hC = document.querySelector('.hourConf');
-    if (hour.checked == false) {
-      hC.style.display = "none";
-    }else{
-      hC.style.display = "block";
+    var hour = document.getElementById('heure');
+    hour.addEventListener('change', function(){
+      var hC = document.querySelector('.hourConf');
+      if (hour.checked == false) {
+        hC.style.display = "none";
+      }else{
+        hC.style.display = "block";
+      }
+    });
+
+    var min = document.getElementById('minute');
+    min.addEventListener('change', function(){
+      var mC = document.querySelector('.minConf');
+      if (min.checked == false) {
+        mC.style.display = "none";
+      }else{
+        mC.style.display = "block";
+      }
+    });
+
+    var sec = document.getElementById('seconde');
+    sec.addEventListener('change', function(){
+      var sC = document.querySelector('.secConf');
+      if (sec.checked == false) {
+        sC.style.display = "none";
+      }else{
+        sC.style.display = "block";
+      }
+    });
+
+    var jour = document.getElementById('jour');
+    jour.addEventListener('change', function(){
+      var dC = document.querySelector('.jourConf');
+      if (jour.checked == false) {
+        dC.style.display = "none";
+      }else{
+        dC.style.display = "block";
+      }
+    });
+
+    var mois = document.getElementById('mois');
+    mois.addEventListener('change', function(){
+      var dC = document.querySelector('.moisConf');
+      if (mois.checked == false) {
+        dC.style.display = "none";
+      }else{
+        dC.style.display = "block";
+      }
+    });
+
+    var an = document.getElementById('annee');
+    an.addEventListener('change', function(){
+      var dC = document.querySelector('.anConf');
+      if (an.checked == false) {
+        dC.style.display = "none";
+      }else{
+        dC.style.display = "block";
+      }
+    });
+
+    var batt = document.getElementById('batterie');
+    batt.addEventListener('change', function(){
+      var dC = document.querySelector('.battConf');
+      if (batt.checked == false) {
+        dC.style.display = "none";
+      }else{
+        dC.style.display = "block";
+      }
+    });
+
+    const closeSett = document.querySelector('.closeSett');
+    closeSett.addEventListener("click", function() {
+      document.body.removeChild(divSett);
+    });
     }
-  });
 
-  var min = document.getElementById('minute');
-  min.addEventListener('change', function(){
-    var mC = document.querySelector('.minConf');
-    if (min.checked == false) {
-      mC.style.display = "none";
-    }else{
-      mC.style.display = "block";
-    }
-  });
-
-  var sec = document.getElementById('seconde');
-  sec.addEventListener('change', function(){
-    var sC = document.querySelector('.secConf');
-    if (sec.checked == false) {
-      sC.style.display = "none";
-    }else{
-      sC.style.display = "block";
-    }
-  });
-
-  var jour = document.getElementById('jour');
-  jour.addEventListener('change', function(){
-    var dC = document.querySelector('.jourConf');
-    if (jour.checked == false) {
-      dC.style.display = "none";
-    }else{
-      dC.style.display = "block";
-    }
-  });
-
-  var mois = document.getElementById('mois');
-  mois.addEventListener('change', function(){
-    var dC = document.querySelector('.moisConf');
-    if (mois.checked == false) {
-      dC.style.display = "none";
-    }else{
-      dC.style.display = "block";
-    }
-  });
-
-  var an = document.getElementById('annee');
-  an.addEventListener('change', function(){
-    var dC = document.querySelector('.anConf');
-    if (an.checked == false) {
-      dC.style.display = "none";
-    }else{
-      dC.style.display = "block";
-    }
-  });
-
-  var batt = document.getElementById('batterie');
-  batt.addEventListener('change', function(){
-    var dC = document.querySelector('.battConf');
-    if (batt.checked == false) {
-      dC.style.display = "none";
-    }else{
-      dC.style.display = "block";
-    }
-  });
-
-  const closeSett = document.querySelector('.closeSett');
-  closeSett.addEventListener("click", function() {
-    document.body.removeChild(divSett);
-  });
 });
 
