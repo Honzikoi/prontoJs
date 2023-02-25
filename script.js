@@ -101,9 +101,9 @@ setInterval(function() {
       pBatt.innerHTML = "";
 
       let batteryLevel = battery.level;
-      let batteryCharging = battery.charging ? "⚡" : "";
+      let batteryCharging = battery.charging ? "⚡" : "🔋";
 
-      let txtBatt = document.createTextNode(" | Battery: " + Math.round(batteryLevel * 100) + "% (" + batteryCharging + ")");
+      let txtBatt = document.createTextNode("  Battery: " + Math.round(batteryLevel * 100) + "% (" + batteryCharging + ")");
       pBatt.appendChild(txtBatt);
 
       navbar.appendChild(pBatt);
