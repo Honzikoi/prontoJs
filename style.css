@@ -114,6 +114,19 @@ input:checked + .slider:before {
   text-decoration:none;
   color: aliceblue;
 }
+
+.closeSett {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.closeSett:hover{
+  color: rgb(200, 188, 188);
+}
+
 @media screen and (max-width: 768px) {
   img {
     width: 100px;

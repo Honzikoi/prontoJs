@@ -113,7 +113,7 @@ setInterval(function() {
 lock.addEventListener("click", function() {
   const newDiv = document.createElement("div");
   newDiv.style.position = "absolute";
-  newDiv.style.width = "99%";
+  newDiv.style.width = "100%";
   newDiv.style.top = "0%";
   newDiv.style.color = "white";
   newDiv.style.zIndex = "99";
@@ -122,7 +122,7 @@ lock.addEventListener("click", function() {
   newDiv.style.alignItems = "center";
   newDiv.style.justifyContent = "center";
   newDiv.style.background = "linear-gradient(to left top, grey, black)";
-  document.body.append(newDiv);
+  document.documentElement.append(newDiv);
 
   var x=0;
   var interval = setInterval(function() {
@@ -157,7 +157,7 @@ lock.addEventListener("click", function() {
             let txtTime = document.createTextNode(heure + ":" + minutes + ":" + secondes);
             spanTime.appendChild(txtTime);
             const body = document.querySelector('body');
-            body.addEventListener("click", function() {
+            document.documentElement.addEventListener("click", function() {
               clearInterval(intervalTime);
               var intervalUnlock = setInterval(function() {
                 x--;
@@ -167,11 +167,11 @@ lock.addEventListener("click", function() {
                     clearInterval(intervalUnlock);
                     newDiv.remove();
                 }
-              }, 15);
+              }, 10);
             });
         }, 1000);
     }
-  }, 15);
+  }, 3);
 
 });
 
@@ -187,8 +187,10 @@ setting.addEventListener("click", function() {
   divSett.style.top = "25%";
   divSett.style.left = "20%";
   divSett.style.zIndex = "5";
-  divSett.style.background = "#5a5a9f";
-  divSett.style.overflowY = "scroll"
+  divSett.style.fontFamily = "Montserrat";
+  divSett.style.overflowY = "scroll";
+  divSett.style.paddingLeft = "20px";
+  divSett.style.background = "linear-gradient(to left top, rgb(20, 20, 24), rgb(173, 156, 156))"
 
   divSett.innerHTML = `<p>Configuration de l'heure:</p>
 
@@ -245,6 +247,19 @@ setting.addEventListener("click", function() {
                       </label></li>
                       </ul></br>
                       `;
+
+  const divClose = document.createElement("div");
+  const iTag = document.createElement("i");
+
+  iTag.classList.add("fa", "fa-close");
+  divClose.appendChild(iTag);
+
+  divClose.style.position = "absolute";
+  divClose.style.top = "10px";
+  divClose.style.right = "10px";
+  divClose.classList.add("closeSett");
+
+  divSett.appendChild(divClose);
 
   document.body.append(divSett);
 
@@ -316,6 +331,11 @@ setting.addEventListener("click", function() {
     }else{
       dC.style.display = "block";
     }
+  });
+
+  const closeSett = document.querySelector('.closeSett');
+  closeSett.addEventListener("click", function() {
+    document.body.removeChild(divSett);
   });
 });
 
