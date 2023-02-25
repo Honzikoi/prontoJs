@@ -38,6 +38,10 @@ td{
     font-size: 60px;
     cursor: pointer;
 }
+tr{
+  color:#fff;
+  font-family: "Montserrat";
+}
 #last-five-winners {
     position: absolute;
     top: 10%;
@@ -81,9 +85,13 @@ td{
     top: 5%;
     right: 15%;
     font-size: 20px;
-    font-family: Montserrat;
+    font-family: "Montserrat";
     color: #fff;
     margin: 20px auto;
+}
+li{
+  color:#fff;
+  font-family: "Montserrat";
 }
 .btnHome {
     position: absolute;
@@ -135,7 +143,7 @@ td{
   #last-five-winners {
     position: absolute;
     top: 75%;
-    right: 20%;
+    right: 22%;
   }
   .grid{
     position: absolute;
@@ -155,7 +163,5 @@ td{
   top: 60%;
   left:30%;
 } 
-
-
 
 }

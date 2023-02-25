@@ -54,7 +54,7 @@ body {
 }
 
 .viewer {
-  margin-left: 12px;
+  margin-left: 8px;
   color: #000000;
   background-color: #054308;
   float: left;
@@ -63,7 +63,7 @@ body {
   text-align: right;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 11em;
+  width: 9.2em;
   height: 3em;
 }
 
@@ -116,7 +116,7 @@ button {
 }
 
 
-@media (min-width: 420px) {
+@media screen and (max-width: 768px) {
   .calculator {
     width: 12em;
   }
@@ -124,3 +124,4 @@ button {
     margin: 0.5em;
   }
 }
+
