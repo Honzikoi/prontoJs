@@ -17,7 +17,7 @@ body {
   font: 300 18px/1.6 "Source Sans Pro",sans-serif;
   padding: 2em 0 2em;
   text-align: center;
-  font-family: Montserrat;
+  font-family: "Montserrat";
 }
 
 /* Gradient text only on Webkit */
@@ -122,6 +122,19 @@ button {
   }
   button {
     margin: 0.5em;
+  }
+  .viewer {
+    margin-left: 14px;
+    color: #000000;
+    background-color: #054308;
+    float: left;
+    padding-right: 8px;
+    line-height: 3em;
+    text-align: right;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 11em;
+    height: 3em;
   }
 }
 
