@@ -33,7 +33,7 @@ setInterval(function() {
     let heure = date.getHours();
 
     pHour.innerHTML = "";
-    let txtHour = document.createTextNode(heure + "h");
+    let txtHour = document.createTextNode(heure + ":");
     pHour.appendChild(txtHour);
 
     let minutes = date.getMinutes();
@@ -42,7 +42,7 @@ setInterval(function() {
     }
 
     pMin.innerHTML = "";
-    let txtMin = document.createTextNode(minutes + "m");
+    let txtMin = document.createTextNode(minutes);
     pMin.appendChild(txtMin);
 
     let secondes = date.getSeconds();
@@ -51,7 +51,7 @@ setInterval(function() {
     }
 
     pSec.innerHTML = "";
-    let txtSec = document.createTextNode(secondes + "s");
+    let txtSec = document.createTextNode(":"+secondes);
     pSec.appendChild(txtSec);
 
     let jour = date.getDate();
@@ -194,7 +194,7 @@ setting.addEventListener("click", function() {
 
   divSett.innerHTML = `<p>Configuration de l'heure:</p>
 
-                      <ul><li><label style="margin-right: 20px;" for="heure">Afficher/masquer l'heure</label><label class="switch">
+                      <ul><li><label style="margin-right: 20px; font-family:"Montserrat";" for="heure">Afficher/masquer l'heure</label><label class="switch">
                         <input id="heure" type="checkbox" checked>
                         <span class="slider round"></span>
                       </label></li>
