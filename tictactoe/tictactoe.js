@@ -29,7 +29,7 @@ function checkGameStatus() {
             cells[b].textContent === currentPlayer &&
             cells[c].textContent === currentPlayer) {
             // gameStatus = `${currentPlayer} Wins!`;
-            alert(`${currentPlayer} wins!`);
+            alert(`${currentPlayer} gagne !`);
             recordWinner(currentPlayer);
             return;
         }
@@ -37,7 +37,7 @@ function checkGameStatus() {
 
     if (moves === 9) {
         // gameStatus = "Tie Game!";
-        alert("Tie game!");
+        alert("Égalité !");
 
         recordWinner("");
     }
@@ -49,7 +49,7 @@ function togglePlayer() {
 
 function resetGame() {
     currentPlayer = "X";
-    gameStatus = "Game On";
+    alert("C'est reparti !");
     moves = 0;
     cells.forEach(cell => cell.textContent = "");
 }
