@@ -199,9 +199,9 @@ function padZero(num) {
   }
 }
 if ("vibrate" in navigator) {
-  console.log("API Vibration est prise en charge !");
+  alert("API Vibration est prise en charge !");
 } else {
-  console.log("API Vibration n'est pas prise en charge.");
+  alert("API Vibration n'est pas prise en charge.");
 }
 
   startBtn.addEventListener("click", function() {
