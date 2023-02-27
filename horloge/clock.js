@@ -198,18 +198,18 @@ function padZero(num) {
     return num;
   }
 }
-  const startBtn = document.getElementById("startBtn");
-  const pauseBtn = document.getElementById("pauseBtn");
-  const resetBtn = document.getElementById("resetBtn");
+  const player = document.getElementById("startBtn");
+  const pauser = document.getElementById("pauseBtn");
+  const reseter = document.getElementById("resetBtn");
 
 if ("vibrate" in navigator) {
-  startBtn.addEventListener("click", function() {
+  player.addEventListener("click", function() {
     navigator.vibrate(100);
   });
-  pauseBtn.addEventListener("click", function() {
+  pauser.addEventListener("click", function() {
     navigator.vibrate(100);
   });
-  resetBtn.addEventListener("click", function() {
+  reseter.addEventListener("click", function() {
     navigator.vibrate(100);
   });
 }
