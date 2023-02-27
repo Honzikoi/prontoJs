@@ -198,3 +198,11 @@ function padZero(num) {
     return num;
   }
 }
+if ("vibrate" in navigator) {
+  // Ajoute un gestionnaire d'événements de clic à l'élément souhaité
+  const button = document.getElementById("btn");
+  button.addEventListener("click", () => {
+    // Déclenche la vibration de l'appareil pour 100 millisecondes
+    navigator.vibrate(100);
+  });
+}
