@@ -198,11 +198,7 @@ function padZero(num) {
     return num;
   }
 }
-if ("vibrate" in navigator) {
-  alert("API Vibration est prise en charge !");
-} else {
-  alert("API Vibration n'est pas prise en charge.");
-}
+var homeBtn = document.getElementById('homeBtn');
 
   startBtn.addEventListener("click", function() {
     navigator.vibrate(100);
@@ -213,5 +209,41 @@ if ("vibrate" in navigator) {
   resetBtn.addEventListener("click", function() {
     navigator.vibrate(100);
   });
+  startButton.addEventListener("click", function() {
+    navigator.vibrate(100);
+  });
+  resumeButton.addEventListener("click", function() {
+    navigator.vibrate(100);
+  });
+  stopButton.addEventListener("click", function() {
+    navigator.vibrate(100);
+  });
+  resetButton.addEventListener("click", function() {
+    navigator.vibrate(100);
+  });
+  homeBtn.addEventListener("click", function() {
+    navigator.vibrate(100);
+  });
 
+  const vibrateBtn = document.getElementById("vibrateBtn");
+  let vibrationEnabled = false;
 
+  if ("vibrate" in navigator) {
+    vibrationEnabled = true;
+    vibrateBtn.innerHTML = 'Vibreur';
+  } else {
+    vibrateBtn.classList.add("disabled");
+  }
+  vibrateBtn.addEventListener("click", function() {
+    if (vibrationEnabled) {
+      vibrationEnabled = false;
+      navigator.vibrate(0);
+      vibrateBtn.innerHTML = 'Vibreur';
+      vibrateBtn.classList.remove("active");
+    } else {
+      vibrationEnabled = true;
+      navigator.vibrate(100);
+      vibrateBtn.innerHTML = 'Silence';
+      vibrateBtn.classList.add("active");
+    }
+  });
