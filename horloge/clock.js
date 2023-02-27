@@ -198,11 +198,19 @@ function padZero(num) {
     return num;
   }
 }
+  const startBtn = document.getElementById("startBtn");
+  const pauseBtn = document.getElementById("pauseBtn");
+  const resetBtn = document.getElementById("resetBtn");
+
 if ("vibrate" in navigator) {
-  // Ajoute un gestionnaire d'événements de clic à l'élément souhaité
-  const button = document.getElementById("btn");
-  button.addEventListener("click", () => {
-    // Déclenche la vibration de l'appareil pour 100 millisecondes
+  startBtn.addEventListener("click", function() {
+    navigator.vibrate(100);
+  });
+  pauseBtn.addEventListener("click", function() {
+    navigator.vibrate(100);
+  });
+  resetBtn.addEventListener("click", function() {
     navigator.vibrate(100);
   });
 }
+
