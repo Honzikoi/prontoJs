@@ -198,19 +198,14 @@ function padZero(num) {
     return num;
   }
 }
-  const player = document.getElementById("startBtn");
-  const pauser = document.getElementById("pauseBtn");
-  const reseter = document.getElementById("resetBtn");
+  startBtn.addEventListener("click", function() {
+    navigator.vibrate(100);
+  });
+  pauseBtn.addEventListener("click", function() {
+    navigator.vibrate(100);
+  });
+  resetBtn.addEventListener("click", function() {
+    navigator.vibrate(100);
+  });
 
-if ("vibrate" in navigator) {
-  player.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-  pauser.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-  reseter.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-}
 
