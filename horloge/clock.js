@@ -200,33 +200,8 @@ function padZero(num) {
 }
 var homeBtn = document.getElementById('homeBtn');
 
-  startBtn.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-  pauseBtn.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-  resetBtn.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-  startButton.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-  resumeButton.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-  stopButton.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-  resetButton.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-  homeBtn.addEventListener("click", function() {
-    navigator.vibrate(100);
-  });
-
   const vibrateBtn = document.getElementById("vibrateBtn");
-  let vibrationEnabled = false;
+  let vibrationEnabled = true;
 
   if ("vibrate" in navigator) {
     vibrationEnabled = true;
@@ -237,13 +212,64 @@ var homeBtn = document.getElementById('homeBtn');
   vibrateBtn.addEventListener("click", function() {
     if (vibrationEnabled) {
       vibrationEnabled = false;
-      navigator.vibrate(0);
       vibrateBtn.innerHTML = 'Vibreur';
       vibrateBtn.classList.remove("active");
     } else {
       vibrationEnabled = true;
-      navigator.vibrate(100);
       vibrateBtn.innerHTML = 'Silence';
       vibrateBtn.classList.add("active");
     }
   });
+  if (vibrationEnabled===true) {
+    startBtn.addEventListener("click", function() {
+      navigator.vibrate(100);
+    });
+    pauseBtn.addEventListener("click", function() {
+      navigator.vibrate(100);
+    });
+    resetBtn.addEventListener("click", function() {
+      navigator.vibrate(100);
+    });
+    startButton.addEventListener("click", function() {
+      navigator.vibrate(100);
+    });
+    resumeButton.addEventListener("click", function() {
+      navigator.vibrate(100);
+    });
+    stopButton.addEventListener("click", function() {
+      navigator.vibrate(100);
+    });
+    resetButton.addEventListener("click", function() {
+      navigator.vibrate(100);
+    });
+    homeBtn.addEventListener("click", function() {
+      navigator.vibrate(100);
+    });
+  }
+  else
+  {
+    startBtn.addEventListener("click", function() {
+      navigator.vibrate(0);
+    });
+    pauseBtn.addEventListener("click", function() {
+      navigator.vibrate(0);
+    });
+    resetBtn.addEventListener("click", function() {
+      navigator.vibrate(0);
+    });
+    startButton.addEventListener("click", function() {
+      navigator.vibrate(0);
+    });
+    resumeButton.addEventListener("click", function() {
+      navigator.vibrate(0);
+    });
+    stopButton.addEventListener("click", function() {
+      navigator.vibrate(0);
+    });
+    resetButton.addEventListener("click", function() {
+      navigator.vibrate(0);
+    });
+    homeBtn.addEventListener("click", function() {
+      navigator.vibrate(0);
+    });    
+  }
