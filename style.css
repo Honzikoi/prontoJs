@@ -39,6 +39,17 @@ html {
   
 }
 
+#latence {
+  position: absolute;
+  top: 6px;
+  right: 65px;
+  color: rgb(1, 0, 0);
+  height: auto;
+  font-family: "Montserrat" , sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 #lock .iconLock, #setting .iconSetting{
   margin-left: 10px;
   font-size: 20px;
@@ -166,5 +177,15 @@ input:checked + .slider:before {
   
   .switch {
     margin-bottom: 5%;
+  }
+  #latence {
+    position: absolute;
+    top: 5px;
+    left: 115px;
+    color: rgb(1, 0, 0);
+    height: auto;
+    font-family: "Montserrat" , sans-serif;
+    font-size: 20px;
+    font-weight: bold;
   }
 }

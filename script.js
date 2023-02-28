@@ -4,6 +4,7 @@ const setting = document.querySelector('#setting');
 let navbar = document.getElementById("navbar");
 let battery = navigator.getBattery();
 let performance = window.performance;
+let latence = document.getElementById("latence");
 navbar.style.display = "inline-flex";
 
 const pHour = document.createElement("p");
@@ -26,6 +27,9 @@ pJour.classList.add("jourConf");
 
 const pBatt = document.createElement("p");
 pBatt.classList.add("battConf");
+
+const pLat = document.createElement("p");
+
 
 setInterval(function() {
     navbar.innerHTML = "";
@@ -347,4 +351,36 @@ setting.addEventListener("click", function() {
     }
 
 });
+const minLatency = 50;
+const maxLatency = 300;
+
+const corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com/';
+const targetUrl = 'https://www.google.com/';
+function calculateLatency(proxy, url) {
+    return new Promise((resolve, reject) => {
+        const startTime = new Date().getTime();
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', proxy + url);
+        xhr.onload = () => {
+            const endTime = new Date().getTime();
+            const latency = endTime - startTime;
+            resolve(latency);
+        };
+        xhr.onerror = () => {
+            reject(new Error('Ping request failed'));
+        };
+        xhr.send();
+    });
+}
+
+
+setInterval(() => {
+    calculateLatency(corsAnywhereUrl, targetUrl)
+        .then(latency => {
+            latence.innerHTML = latency + " "+"⏚";
+        })
+        .catch(error => {
+            console.error(error);
+        });
+}, 1000);
 
